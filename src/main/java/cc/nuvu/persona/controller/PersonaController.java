@@ -29,14 +29,14 @@ public class PersonaController {
 	
 
 	@PostMapping("/guardar")
-	@ApiOperation(value = "Crear Persona", response = void.class, httpMethod = "POST")
+	@ApiOperation(value = "Crear Persona", response = Persona.class, httpMethod = "POST")
 	@ApiResponses({
 		@ApiResponse(code = 200, message = "Persona creada."),
 		@ApiResponse(code = 400, message = "Datos de entrada incorrectos."),
 		@ApiResponse(code = 500, message = "Error inesperado.")
 	})
-	public void guardarPersona(@RequestBody Persona persona) {
-		this.personaBusiness.guardarPersona(persona);
+	public Persona guardarPersona(@RequestBody Persona persona) {
+		return this.personaBusiness.guardarPersona(persona);
 	}
 	
 	@GetMapping("/consultar")

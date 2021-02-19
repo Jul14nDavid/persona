@@ -19,8 +19,8 @@ public class PersonaBusinessImpl implements PersonaBusiness {
 	
 
 	@Override
-	public void guardarPersona(Persona persona) {
-		this.personaRepository.save(persona);
+	public Persona guardarPersona(Persona persona) {
+		return this.personaRepository.save(persona);
 	}
 
 	@Override

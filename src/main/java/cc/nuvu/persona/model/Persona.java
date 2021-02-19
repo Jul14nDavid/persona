@@ -36,7 +36,7 @@ public class Persona {
 	
 	@ApiModelProperty(name = "numDocumento", required = true, value = "Numero de documento de la persona")
 	@NotNull(message = "El campo numDocumento no puede ser nulo")
-	private String numDocumento;
+	private Long numDocumento;
 	
 	@ApiModelProperty(name = "nombres", required = true, value = "Nombres de la persona")
 	@NotNull(message = "El campo nombres no puede ser nulo")

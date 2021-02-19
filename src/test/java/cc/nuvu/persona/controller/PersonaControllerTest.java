@@ -39,14 +39,14 @@ public class PersonaControllerTest {
 		Persona persona = Persona.builder()
 			.id(1L)
 			.tipoDocumento("CC")
-			.numDocumento("1234567890")
+			.numDocumento(1234567890L)
 			.nombres("Julian David")
 			.apellidos("Infante Lara")
 			.correo("julian@correo.com")
 		.build();
 		
 		// Act
-		doNothing().when(this.personaBusinessImpl).guardarPersona(Mockito.any());
+		when(this.personaBusinessImpl.guardarPersona(Mockito.any())).thenReturn(persona);
 		this.personaController.guardarPersona(persona);
 		
 		// Assert
@@ -59,7 +59,7 @@ public class PersonaControllerTest {
 		Persona persona = Persona.builder()
 			.id(1L)
 			.tipoDocumento("CC")
-			.numDocumento("1234567890")
+			.numDocumento(1234567890L)
 			.nombres("Julian David")
 			.apellidos("Infante Lara")
 			.correo("julian@correo.com")
@@ -82,7 +82,7 @@ public class PersonaControllerTest {
 		Persona persona = Persona.builder()
 			.id(1L)
 			.tipoDocumento("CC")
-			.numDocumento("1234567890")
+			.numDocumento(1234567890L)
 			.nombres("Julian David")
 			.apellidos("Infante Lara")
 			.correo("julian@correo.com")
@@ -102,7 +102,7 @@ public class PersonaControllerTest {
 		Persona persona = Persona.builder()
 			.id(1L)
 			.tipoDocumento("CC")
-			.numDocumento("1234567890")
+			.numDocumento(1234567890L)
 			.nombres("Julian David")
 			.apellidos("Infante Lara")
 			.correo("julian@correo.com")
